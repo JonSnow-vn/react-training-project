@@ -1,0 +1,55 @@
+.wrapForm {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+
+    .form {
+        width: 100%;
+    }
+
+    .row {
+        height: 28px;
+        position: relative;
+        display: flex;
+        margin: 4px 0px;
+        border-bottom: 1px solid;
+    }
+
+    label {
+        flex: 1;
+    }
+
+    .content {
+        flex: 3;
+        border: none;
+        outline: none;
+        font-size: 16px;
+        padding-left: 20px;
+    }
+
+    .btn {
+        display: flex;
+        width: 100%;
+        justify-content: flex-end;
+        margin-top: 20px;
+    }
+
+    .err {
+        position: absolute;
+        float: right;
+        right: 0;
+        color: red;
+    }
+
+    /* Chrome, Safari, Edge, Opera */
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    /* Firefox */
+    input[type=number] {
+        -moz-appearance: textfield;
+    }
+}

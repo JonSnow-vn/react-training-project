@@ -1,25 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
+
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { store } from './store/store';
+import { Provider } from 'react-redux';
+
 import './App.css';
+import Header from './common-components/Header/Header';
+import ListUserComponent from './components/list-user/ListUserComponent';
+import UserFormComponent from './components/user-form/UserFormComponent';
+import Footer from './common-components/Footer/Footer';
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider store={store}>
+      <BrowserRouter>
+        <div className="App">
+          <Header />
+          <Routes>
+            <Route path="/" element={<ListUserComponent />} />
+            <Route path="/user-form/:userId" element={<UserFormComponent />} />
+            <Route path="/user-form" element={<UserFormComponent />} />
+          </Routes>
+          <Footer />
+        </div>
+      </BrowserRouter>
+    </Provider>
   );
 }
 

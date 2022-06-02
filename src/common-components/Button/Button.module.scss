@@ -1,0 +1,27 @@
+.btn {
+    width: 96px;
+    height: 32px;
+    background-color: lightskyblue;
+    outline: none;
+    border: 1px solid #7a7373;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-weight: 600;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &:active {
+        background-color: aquamarine;
+        outline: 1px solid #333;
+    }
+}
+
+.link {
+    display: flex;
+    text-decoration: none;
+    color: #000;
+    align-items: center;
+    justify-content: center;
+}
