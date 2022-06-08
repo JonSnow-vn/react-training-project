@@ -123,7 +123,7 @@ function UserFormComponent() {
                     </div>
                     <div className={styles.btn}>
                         <Button type="button" label='Save' action={() => { }} typeButton="submit" margin='0 8px 0 0' />
-                        {userId && <Button type="button" label='Delete' action={() => { handleDelete(Number(userId)) }} margin='0 8px 0 0' />}
+                        {userId && <Button type="button" label='Delete' action={() => { handleDelete(Number(userId)) }} typeButton="button" margin='0 8px 0 0' />}
                         <Button type="link" label='Cancel' action={"/"} />
                     </div>
                 </Form>
