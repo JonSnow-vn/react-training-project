@@ -97,7 +97,7 @@ function UserFormComponent() {
                 <Form className={styles.form}>
                     <div className={styles.row}>
                         <label htmlFor="fullName">Full name</label>
-                        <span>:</span>
+                        <span>:111</span>
                         <Field id="fullName" name="fullName" className={styles.content} placeholder="Please enter full name" validate={validateFullName} />
                         {errors.fullName && touched.fullName && <div className={styles.err}>{errors.fullName}</div>}
                     </div>
@@ -126,6 +126,9 @@ function UserFormComponent() {
                         {userId && <Button type="button" label='Delete' action={() => { handleDelete(Number(userId)) }} typeButton="button" margin='0 8px 0 0' />}
                         <Button type="link" label='Cancel' action={"/"} />
                     </div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
                 </Form>
             )}
         </Formik>
