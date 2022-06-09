@@ -126,10 +126,6 @@ function UserFormComponent() {
                         {userId && <Button type="button" label='Delete' action={() => { handleDelete(Number(userId)) }} typeButton="button" margin='0 8px 0 0' />}
                         <Button type="link" label='Cancel' action={"/"} />
                     </div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
                 </Form>
             )}
         </Formik>
